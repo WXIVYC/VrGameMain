@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -15,6 +11,7 @@ namespace FPFInventory
         public bool destroyItem = false;
         private void OnTriggerEnter(Collider other)
         {
+            print("Trigger");
             if (other.gameObject.GetComponentInParent<FPFInventory.SceneItem>())
             {
                 FPFInventory.SceneItem sceneItem = other.gameObject.GetComponentInParent<FPFInventory.SceneItem>();
@@ -28,7 +25,7 @@ namespace FPFInventory
                     OnCollectItem.Invoke(inventoryItem);
                 } else
                 {
-                    Debug.LogWarning("No hay suscriptores al proceso de recogida de ítems");
+                    Debug.LogWarning("No hay suscriptores al proceso de recogida de Items");
                 }
 
                 if (destroyItem)
