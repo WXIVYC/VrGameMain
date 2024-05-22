@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 4360972099184002559}
   - component: {fileID: 6613042927114548093}
   - component: {fileID: 4291356301458589102}
-  - component: {fileID: 5172091927180214983}
   m_Layer: 0
   m_Name: SphereFire
   m_TagString: Untagged
@@ -153,21 +152,6 @@ MonoBehaviour:
   pupa: 50
   autodestruccion: 1
   tagEnemigo: Enemigo
---- !u!114 &5172091927180214983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3635151615758464511}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 135359ce7d91eef4697acf7cf8f423f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sphereFirePrefab: {fileID: 3635151615758464511}
-  puntoDeDisparo: {fileID: 0}
-  costoDeMana: 10
 --- !u!1001 &3511539284477987461
 PrefabInstance:
   m_ObjectHideFlags: 0
