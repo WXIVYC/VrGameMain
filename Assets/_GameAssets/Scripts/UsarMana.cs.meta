@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 135359ce7d91eef4697acf7cf8f423f8
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - bolaDeFuegoPrefab: {fileID: 3635151615758464511, guid: 719714c7911e70b46ab561197d99a718,
+      type: 3}
+  - puntoDeDisparo: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

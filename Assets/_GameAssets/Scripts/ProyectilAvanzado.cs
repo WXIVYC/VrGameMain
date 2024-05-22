@@ -4,32 +4,41 @@ using UnityEngine;
 
 public class ProyectilAvanzado : MonoBehaviour
 {
-
     public GameObject efectoImpactoConAudio;
-    public int pupa;
+    public int pupa; // Daño que causa el proyectil
     public bool autodestruccion;
     public string tagEnemigo;
-    public 
 
-    void OnCollisionEnter(Collision collision){
-        if (efectoImpactoConAudio){
+    void OnCollisionEnter(Collision collision)
+    {
+        // Crear el efecto de impacto si está asignado
+        if (efectoImpactoConAudio)
+        {
             Instantiate(efectoImpactoConAudio, transform.position, transform.rotation);
-        } else {
+        }
+        else
+        {
             Debug.LogWarning("El arma no tiene asociado un prefab de explosión (o similar)");
         }
+
+        // Verificar si el objeto colisionado es un enemigo
         if (collision.gameObject.CompareTag(tagEnemigo))
         {
-            if (collision.gameObject.GetComponent<EnemigoHealthManager>() != null){
-                    collision.gameObject.GetComponent<EnemigoHealthManager>().HacerPupa(pupa);
-            } else {
+            EnemigoHealthManager enemigoHealth = collision.gameObject.GetComponent<EnemigoHealthManager>();
+            if (enemigoHealth != null)
+            {
+                enemigoHealth.HacerPupa(pupa);
+            }
+            else
+            {
                 Debug.LogWarning("El enemigo no tiene el componente EnemigoHealthManager");
             }
         }
-        if (autodestruccion) 
+
+        // Destruir el proyectil si la autodestrucción está habilitada
+        if (autodestruccion)
         {
             Destroy(gameObject);
         }
-        
-
     }
 }
