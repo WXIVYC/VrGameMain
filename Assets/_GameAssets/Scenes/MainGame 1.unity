@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4122777, g: 0.48923105, b: 0.6032885, a: 1}
+  m_IndirectSpecularColor: {r: 0.358096, g: 0.45026255, b: 0.57653934, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8821,7 +8821,7 @@ PrefabInstance:
     - target: {fileID: -5078791627627836724, guid: 00c9c177e828a57439e290aef2a23b3f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.3481
+      value: -5.08
       objectReference: {fileID: 0}
     - target: {fileID: -4556973288927059552, guid: 00c9c177e828a57439e290aef2a23b3f,
         type: 3}
@@ -12921,6 +12921,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: XR Device Simulator
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
