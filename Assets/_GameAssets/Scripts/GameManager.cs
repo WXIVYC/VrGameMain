@@ -1,8 +1,9 @@
-using System.Collections.Generic;
+
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,12 +12,13 @@ public class GameManager : MonoBehaviour
     public int puntuacion = 0;
     public int puntuacionMaxima = 0;
     public int maxMana = 100;
-    public  int currentMana;
+    public int currentMana;
 
-    public Image manaBar; // Referencia a la barra de mana en la interfaz gráfica
+    public Image manaBar;
     public Image imageVida;
     public TextMeshProUGUI textoPuntuacion;
     public TextMeshProUGUI textoPuntuacionMaxima;
+    public TextMeshProUGUI textoNivel; // Nuevo campo para el nivel del jugador
 
     public List<GameObject> objetosAActivarCuandoGameOver;
 
@@ -27,6 +29,7 @@ public class GameManager : MonoBehaviour
         InicializarPuntuacion();
         ActualizarBarraDeSalud();
         InicializarMana();
+        ActualizarNivel(1); // Inicializar el nivel en 1 o el valor inicial deseado
     }
 
     private void Update()
@@ -67,7 +70,7 @@ public class GameManager : MonoBehaviour
         {
             float fillAmount = (float)currentMana / maxMana;
             manaBar.fillAmount = fillAmount;
-        } 
+        }
     }
 
     public int GetCurrentMana()
@@ -155,5 +158,15 @@ public class GameManager : MonoBehaviour
     public void ReiniciarJuego()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    // Nuevo método para actualizar el nivel
+    public void ActualizarNivel(int nivel)
+    {
+        if (textoNivel != null)
+        {
+            textoNivel.text = " " + nivel.ToString();
+            // textoNivel.text = "Level " + nivel.ToString();
+        }
     }
 }
